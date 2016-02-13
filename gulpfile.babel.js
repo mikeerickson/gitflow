@@ -1,6 +1,6 @@
-import gulp from 'gulp';
-import babel from 'gulp-babel'
-import plumber from 'gulp-plumber';
+// GULPFILE.BABEL TASK
+// =============================================================================
+
 import console from 'gulp-messenger';
 import requireDir from 'require-dir'
 
@@ -12,8 +12,4 @@ import requireDir from 'require-dir'
 requireDir('./tasks', { recurse: false });
 
 console.init({timestamp: false});
-
-//console.log('\n');
-//console.chalkline.green();
-//console.log('\n');
 

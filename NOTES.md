@@ -98,3 +98,49 @@ After establishing default project, we are ready to start writing code. We will 
    ````
 
 5. We have been a bit "sloppy" so we need to clean our code and adjust `./eslintrc` to disable checks we are not concerned with
+
+#### Add Gulp Workflow
+
+1. Create `gulpfile.babel.js` (Babel supported gulpfile, allows use of ES6 in tasks)
+
+		````
+		// GULPFILE.BABEL TASK
+		// =============================================================================
+		
+		import console from 'gulp-messenger';
+		import requireDir from 'require-dir'
+		
+		// PRELOAD ALL TASKS
+		// =============================================================================
+		// you can execute individual tasks as `gulp <taskName>`
+		// WARNING: don't load recursively (omit `_disabled` tasks)
+		
+		requireDir('./tasks', { recurse: false });
+		
+		console.init({timestamp: false});
+		````
+2. Create `tasks` folder (at root level)
+
+   $ md tasks
+
+3. Create simple gulp ES6 tasks to make sure all is working
+
+   ````
+   import gulp from 'gulp'
+
+   gulp.task('sample', () => {
+		 console.log('Test Gulp Task')
+	 })
+   ````
+
+4. Fire gulp to test our `sample` tasks
+
+   $ gulp sample
+
+   ````
+   [15:45:10] Requiring external module babel-core/register
+	 [15:45:11] Using gulpfile ~/Documents/Projects/gitflow/gulpfile.babel.js
+	 [15:45:11] Starting 'sample'...
+   Test Gulp Task
+	 [15:45:11] Finished 'sample' after 124 μs
+  ````
