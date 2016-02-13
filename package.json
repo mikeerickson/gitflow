@@ -1,6 +1,6 @@
 {
   "name": "gitflow",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Support Project For Gitflow Tutorial",
   "main": "index.js",
   "scripts": {
