@@ -1,0 +1,15 @@
+{
+  "name": "gitflow",
+  "version": "0.0.1",
+  "description": "Support Project For Gitflow Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "git",
+    "workflow"
+  ],
+  "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
+  "license": "MIT"
+}
