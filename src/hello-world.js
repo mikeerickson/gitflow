@@ -2,4 +2,6 @@
 
 var console = require('gulp-messenger');
 
-console.success('Hello World!');
+console.success('Hello World from merge conflict branch');
+
+console.log('this is added on merge conflict branch');
