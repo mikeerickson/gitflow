@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/hello-world.js"
+    "start": "nodemon index.js --debug --exec babel-node --presets es2015,stage-2"
   },
   "keywords": [
     "git",
@@ -15,5 +15,12 @@
   "license": "MIT",
   "devDependencies": {
     "gulp-messenger": "0.12.0"
+  },
+  "dependencies": {
+    "babel-cli": "6.5.1",
+    "babel-core": "6.5.2",
+    "babel-loader": "6.2.2",
+    "babel-preset-es2015": "6.5.0"
   }
 }
+

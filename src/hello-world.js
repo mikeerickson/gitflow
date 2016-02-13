@@ -1,7 +1,6 @@
 // ./src/hello-world.js
 
-var console = require('gulp-messenger');
+// var console = require('gulp-messenger');
+import console from 'gulp-messenger';
 
-console.success('Hello World from merge conflict branch');
-
-console.log('this is added on merge conflict branch');
+console.success('we have successfully loaded application `src` files');

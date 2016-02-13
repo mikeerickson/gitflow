@@ -61,5 +61,18 @@ After establishing default project, we are ready to start writing code. We will 
 7. After successful merge (we dont have any merge conflicts), we will now push all code
    `$ git push origin master`
 
+#### Convert to ES6
 
+1. Install babel modules
+   $ npm i -S babel-cli babel-core babel-loader babel-preset-es2015 babel-preset-stage-2
+
+2. Add ./index which imports `babel-core/register` and `./src` files
+
+3. Add `./src/index.js` which in turn loads rest of `./src` files
+
+4. Modify `npm start` script to call `nodemon` instead of `node`
+
+   ````
+   "start": "nodemon index.js --debug --exec babel-node --presets es2015,stage-2"
+   ````
 
