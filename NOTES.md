@@ -98,4 +98,3 @@ After establishing default project, we are ready to start writing code. We will 
    ````
 
 5. We have been a bit "sloppy" so we need to clean our code and adjust `./eslintrc` to disable checks we are not concerned with
-
