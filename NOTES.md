@@ -76,3 +76,26 @@ After establishing default project, we are ready to start writing code. We will 
    "start": "nodemon index.js --debug --exec babel-node --presets es2015,stage-2"
    ````
 
+#### Add ESLint
+
+1. Add node modules
+   ````
+   $ npm i -D eslint babel-eslint eslint-loader eslint-plugin-nodeca
+   ````
+
+2. Add `./eslintrc` 
+
+3. Update `package.json` adding `lint` script 
+   ````
+   ....
+   "lint": "eslint . --ext .js --ext .es6 || true"
+	 ....
+   ````
+
+4. Test linting
+   ````
+   $ npm run lint
+   ````
+
+5. We have been a bit "sloppy" so we need to clean our code and adjust `./eslintrc` to disable checks we are not concerned with
+
