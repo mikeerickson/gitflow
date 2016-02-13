@@ -38,8 +38,28 @@ After establishing default project, we are ready to start writing code. We will 
 
 3. Add a simple console log to `hello-world.js`
 
-4. Test code using node
+4. update package.json, adding start script
 
+	....
+  "scripts": {
+	  "start": "node src/hello-world.js"
+  }
+  ....
+
+5. Test code using node
+   $ node src/hello-world
+   -- or --
+   $ npm start
+
+6. Assuming all is good, time to merge working branch with master
+
+   `$ git checkout master`
+   `$ git merge first-code-branch`
+
+   At this point, the new code has been merged with our master branch, but not pushed yet
+
+7. After successful merge (we dont have any merge conflicts), we will now push all code
+   `$ git push origin master`
 
 
 
