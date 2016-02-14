@@ -14,6 +14,7 @@ Detailed Changelog for project here [CHANGELOG.md](https://github.com/mikeericks
 
 Copyright (c) 2016 Mike Erickson
 Released under the MIT license
+	
 [Complete LICENSE here](https://github.com/mikeerickson/gitflow/blob/master/LICENSE)
 
 ### Credits
