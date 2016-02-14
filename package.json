@@ -1,6 +1,6 @@
 {
   "name": "gitflow",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Support Project For Gitflow Tutorial",
   "main": "index.js",
   "scripts": {
@@ -27,8 +27,10 @@
     "eslint-plugin-nodeca": "1.0.3",
     "gulp": "3.9.1",
     "gulp-babel": "6.1.2",
+    "gulp-eslint": "2.0.0",
     "gulp-messenger": "0.12.0",
     "gulp-mocha": "2.2.0",
+    "gulp-plumber": "1.1.0",
     "mocha": "2.4.5",
     "mocha-unfunk-reporter": "0.4.0",
     "require-dir": "0.3.0"

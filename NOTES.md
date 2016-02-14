@@ -187,5 +187,26 @@ We have chosen to use gulp as opposed to something like Webpack as I feel Webpac
 		-> passed 1 of 1 test (9ms)
    ````
 
+#### Add ESLint Task
 
+1. Add node modules
 
+  ````
+  $ npm i -D gulp-eslint gulp-plumber
+  ````
+
+2. Create `eslint` gulp task
+
+   * See `./tasks/eslint.js` *
+	
+3. Run `eslint` tasks and see how we are doing (we will be adding a simple watcher next)	
+
+   `````
+   $ gulp eslint
+   ````
+
+#### Add Watch Tasks so we can have a nice development workflow
+
+1. Create `watch` gulp task
+
+   * See `./tasks/watch.js` *
