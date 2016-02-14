@@ -16,4 +16,4 @@ gulp.task('clean:logs', () => {
 	del(config.clean.logs)
 })
 
-gulp.task('clean:all', ['clean:dist','clean:logs'])
+gulp.task('clean:all', ['clean:dist', 'clean:logs'])

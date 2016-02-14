@@ -19,7 +19,7 @@ module.exports = {
 		openReport: true
 	},
 	clean: {
-		logs: ['./logs','./spec/logs'],
+		logs: ['./logs', './spec/logs'],
 		todo: ['./todo.*']
 	},
 	build: {

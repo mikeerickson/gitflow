@@ -14,7 +14,7 @@ gulp.task('babelify', () => {
 	return gulp.src(config.scripts.src)
 		.pipe(plumber({
 			errorHandler: function(err) {
-				if ( ! err.errno === -17 ) {
+				if (!err.errno === -17) {
 					msg.error(err)
 				}
 				this.emit('end')
