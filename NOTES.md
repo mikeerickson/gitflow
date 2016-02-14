@@ -101,6 +101,8 @@ After establishing default project, we are ready to start writing code. We will 
 
 #### Add Gulp Workflow
 
+We have chosen to use gulp as opposed to something like Webpack as I feel Webpack is overkill for a small node project and we just need some simple tasks. The rest of this project will be adding some other typical tasks (next we will be adding testing via Mocha and a new task for ESlint so we can apply both via watch)
+
 1. Create `gulpfile.babel.js` (Babel supported gulpfile, allows use of ES6 in tasks)
 
 		````
@@ -144,3 +146,46 @@ After establishing default project, we are ready to start writing code. We will 
    Test Gulp Task
 	 [15:45:11] Finished 'sample' after 124 μs
   ````
+
+#### Add Mocha Tests
+
+1. Install node modules
+   ````
+   $ npm i -D chai mocha mocha-unfunk-reporter
+
+2. Create `spec` folder
+
+   $ md specs && cd specs
+
+3. Create Sample Spec
+
+   ````
+		import chai from 'chai'
+		
+		let expect = chai.expect
+		let should = chai.should
+		
+		
+		describe('HelloWorld Spec', () => {
+			it('should pass simple test, just want to see some green!', (done) => {
+				expect(true).to.be.true
+				done()
+			})
+		})
+   ````
+
+4. Execute `mocha` gulp task
+
+   ````
+   $ gulp mocha
+
+		-> running 1 suite
+		
+		HelloWorld Spec
+		should pass simple test, just want to see some green!.. ok
+		
+		-> passed 1 of 1 test (9ms)
+   ````
+
+
+
