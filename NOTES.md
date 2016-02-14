@@ -13,7 +13,7 @@ The following assumptions:
 
 #### Create git project
 
-1. From website, create new projects
+1. From website, create new project
 
 2. Add initial files to establlish working directory
 
@@ -61,7 +61,7 @@ After establishing default project, we are ready to start writing code. We will 
 7. After successful merge (we dont have any merge conflicts), we will now push all code
    `$ git push origin master`
 
-#### Convert to ES6
+#### Convert to ES6 (v0.1.0)
 
 1. Install babel modules
    $ npm i -S babel-cli babel-core babel-loader babel-preset-es2015 babel-preset-stage-2
@@ -76,7 +76,7 @@ After establishing default project, we are ready to start writing code. We will 
    "start": "nodemon index.js --debug --exec babel-node --presets es2015,stage-2"
    ````
 
-#### Add ESLint
+#### Add ESLint (v0.1.0)
 
 1. Add node modules
    ````
@@ -99,7 +99,7 @@ After establishing default project, we are ready to start writing code. We will 
 
 5. We have been a bit "sloppy" so we need to clean our code and adjust `./eslintrc` to disable checks we are not concerned with
 
-#### Add Gulp Workflow
+#### Add Gulp Workflow (v0.2.0)
 
 We have chosen to use gulp as opposed to something like Webpack as I feel Webpack is overkill for a small node project and we just need some simple tasks. The rest of this project will be adding some other typical tasks (next we will be adding testing via Mocha and a new task for ESlint so we can apply both via watch)
 
@@ -147,7 +147,7 @@ We have chosen to use gulp as opposed to something like Webpack as I feel Webpac
 	 [15:45:11] Finished 'sample' after 124 μs
   ````
 
-#### Add Mocha Tests
+#### Add Mocha Tests (v0.3.0)
 
 1. Install node modules
    ````
@@ -187,7 +187,7 @@ We have chosen to use gulp as opposed to something like Webpack as I feel Webpac
 		-> passed 1 of 1 test (9ms)
    ````
 
-#### Add ESLint Task
+#### Add ESLint Task (v0.4.0)
 
 1. Add node modules
 
@@ -211,7 +211,7 @@ We have chosen to use gulp as opposed to something like Webpack as I feel Webpac
 
    * See `./tasks/watch.js` *
 
-#### Add Build Task
+#### Add Build Task (v0.5.0)
 
 We are coming to the end of this series! The last thing we need to add to our workflow is a simple `Build` tasks which will perform the following
 
@@ -234,7 +234,7 @@ We are coming to the end of this series! The last thing we need to add to our wo
    ````
    $ npm i -D babelify uglify run-sequence
 
-#### Add Webpack
+#### Add Webpack (v0.6.0)
 
 For those of you who wish to use webpack instead of gulp, this section will outline the steps required for add `weback` to our !project
 
