@@ -1,0 +1,1 @@
+"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}require("./hello-world");var _gulpMessenger=require("gulp-messenger"),_gulpMessenger2=_interopRequireDefault(_gulpMessenger);_gulpMessenger2["default"].note("notice from ./src/index");

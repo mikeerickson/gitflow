@@ -210,3 +210,26 @@ We have chosen to use gulp as opposed to something like Webpack as I feel Webpac
 1. Create `watch` gulp task
 
    * See `./tasks/watch.js` *
+
+#### Add Build Task
+
+We are coming to the end of this series! The last thing we need to add to our workflow is a simple `Build` tasks which will perform the following
+
+- Make sure all of our code is clean [ESLint Task]
+
+- Make sure all of our code passes tests [Mocha Task]	
+
+- Babelify our code so it will be in ES5 format (even though we can use ES6 with Node, this is fun exercise) [Babel Task]
+
+- Bundle all of our code up into a single file and create distribution directory [Build Task]
+  ./dist/app.js
+
+- Mangle (Uglify) source and place in distribution directory [Build Task]
+  ./dist/app.min.js
+
+- Create Source Maps [Build Task]
+  ./dist/app.map
+
+1. Install node modules
+   ````
+   $ npm i -D babelify uglify run-sequence
