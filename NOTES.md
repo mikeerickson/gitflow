@@ -233,3 +233,53 @@ We are coming to the end of this series! The last thing we need to add to our wo
 1. Install node modules
    ````
    $ npm i -D babelify uglify run-sequence
+
+#### Add Webpack
+
+For those of you who wish to use webpack instead of gulp, this section will outline the steps required for add `weback` to our !project
+
+1. Install webpack 
+   ````
+   $ npm i -D webpack babel-loader eslint-loader
+
+2. Create webpack configuration file 
+   
+   * See ./webpack.config.js *
+	
+3. There are a few configuration points you may need to adjust (based on naming conventions, etc)
+
+   I am using babel-loader and eslint-loader to execute during build process
+
+		 ````
+		module: {
+			loaders: [
+				{ test: /\.js$/, loader: 'babel-loader' },
+				{ test: /\.js$/, loader: 'eslint-loader' }
+			]
+		}
+		````
+  In addition, the `entry` and `output` keys in main section can be customized to suit your needs
+		````
+		  entry: path.join(__dirname, 'index.js'),
+			output: {
+			filename: path.join(__dirname, 'dist/app.bundle.js')
+		},
+		````
+
+  - The `entry` key is our base index file (located at `./index.js`)
+  - The `output` key defines where the bundled file will be created (this can be anything you wish)
+
+4. Now you just need to execute `webpack` and all should be good to go!  It really is that simple (just need to have a solid webpack.config.js)
+   ````
+   $ webpack
+
+5. If you wish to have webpack running while you are creating your project, just add the `-w` flag
+   ````
+   $ webpack -w 
+   ````
+   * Note: There are two npm scripts you can use instead of calling webpack directly (these are merely convenience scripts) *
+	   ````
+     - npm run build
+     - npm run dev
+     ````
+
